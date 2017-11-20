@@ -1,0 +1,109 @@
+@import './variables.less';
+
+.formGroupState(@borderColor) {
+    .form-control {
+        border-color: @borderColor;
+
+        &:focus {
+            box-shadow: unset;
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+
+    input.form-control {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    select.form-control {
+        color: @gray-light;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .form-control,
+    .form-control-static {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .form-control-static {
+        background-color: #F6F6F6;
+        padding-top: 6px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .form-control {
+        border-width: 0 0 2px 0;
+        border-color: @gray-lighter;
+        outline: 0;
+        border-radius: 0;
+        box-shadow: unset;
+        position: relative;
+        z-index: 3;
+
+        &:focus {
+            border-color: @brand-primary;
+        }
+    }
+
+    &.has-success {
+        .formGroupState(@brand-success);
+    }
+    &.has-error {
+        .formGroupState(@brand-danger);
+    }
+
+    .control-label {
+        color: @gray-light;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    /* animated labels */
+    input.form-control,
+    select.form-control,
+    .form-control-static {
+        margin-top: 2em;
+
+        + .control-label {
+            position: absolute;
+            transition: .1s bottom, .1s opacity;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    input, select {
+        &.form-control + .control-label {
+            bottom: 50%;
+            opacity: 0;
+        }
+    }
+
+    &.has-value {
+        input, select {
+            &.form-control + .control-label {
+                bottom: 100%;
+                opacity: 1;
+            }
+        }
+    }
+
+    .form-control-static + .control-label {
+        bottom: 100%;
+        opacity: 1;
+    }
+}
+
+.checkbox {
+    padding-left: 10px;
+}

@@ -1,0 +1,24 @@
+@import './variables.less';
+
+.line-behind {
+    position: relative;
+    z-index: 1;
+    display: block;
+    
+    &:before {
+        border-top: 1px solid #DDD;
+        content:"";
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+  
+    > * { 
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+        background: @body-bg; 
+        padding-right: 10px;
+        padding-left: 10px;
+        display: inline-block;
+    }
+  }

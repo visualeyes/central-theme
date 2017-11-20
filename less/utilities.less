@@ -1,0 +1,22 @@
+@import "./variables.less";
+
+.fade-out {
+    animation-duration: 3s;
+    animation-name: fadeOut;
+    animation-fill-mode: forwards;  
+}
+
+.text-light {
+    color: @gray-light;
+}
+
+@keyframes fadeOut {
+    50% {
+        opacity: 1; 
+        visibility: visible;
+    }
+    100% {
+        opacity: 0; 
+        visibility: hidden;
+    }
+}

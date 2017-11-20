@@ -1,0 +1,463 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" type="text/css" href="/dist/css/theme.css">
+    <title>Theme Demo</title>
+
+    <style>
+        /* app specific styles */
+
+        .jobs-list {
+            padding-top: 10px;
+        }
+
+        .job-status .traffic-light {
+            margin: 5px auto;
+        }
+
+        .job-status {
+            padding-top: 40px;
+            text-align: center;
+            color: #BBB;
+            text-transform: uppercase;
+        }
+
+        .panel-job .job-detail {
+            display: inline-block;
+            margin-right: 15px;
+            color: #BBB;
+        }
+
+        .panel-job .panel-footer {
+            border-top: 1px solid #EEE;
+        }
+
+        .logo {
+            width: 35px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-lg-2 col-sm-3 navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <span class="logo">&nbsp;</span>
+                        <span class="title">CareerHub Australia</span>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <div class="navbar-organisation">
+                        <small>You're managing</small>
+                        <div>
+                            <h3 style="word-break: break-word;">Megacorp</h3>
+                        </div>
+                        <a>Change organisation</a>
+                    </div>
+                    <ul id="sidebar-menu" class="nav navbar-nav">
+                        <li role="presentation" class="active">
+                            <a role="button" href="#">
+                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a role="button" href="#">
+                                <span class="glyphicon glyphicon-home"></span>&nbsp;My Organisation</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a role="button" href="#">
+                                <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Invoices / Reciepts</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a role="button" href="#">
+                                <span class="glyphicon glyphicon-info-sign"></span>&nbsp; Help &amp; resources</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-user">
+                        <a role="button" href="#">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;pete@visualeyes.net.au</a>
+                        <a role="button" href="#">
+                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
+                        </ul>
+            </nav>
+            <div class="page col-lg-10 col-lg-offset-2 col-sm-9 col-sm-offset-3">
+                <div class="page-header">
+                    <h2>
+                        <span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs
+                        <a class="btn btn-primary" href="#">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;Add new job
+                        </a>
+                        <a class="btn" href="#">
+                            <i class="glyphicon glyphicon-chevron-left"></i> Back
+                        </a>
+                    </h2>
+                </div>
+
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    Something happened
+                </div>
+
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <i class="glyphicon glyphicon-ok"></i>
+                    Something good happened
+                </div>
+
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                    Something bad happened
+                </div>
+
+                <ul class="nav-inline nav" style="text-align: center; margin-top: -10px;">
+                    <li role="presentation" class="active">
+                        <a role="button" href="#">Dashboard</a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a role="button" href="#">draft</a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a role="button" href="#">pending</a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a role="button" href="#">active</a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a role="button" href="#">expired</a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a role="button" href="#">all</a>
+                    </li>
+                </ul>
+
+
+                <div class="line-behind">
+                    <h4 class="text-muted" style="padding-left: 0px;">Drafts</h4>
+                    <a href="#">
+                        All draft jobs
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination" style="margin-top: 5px;">
+                            <li aria-label="Previous" class="disabled">
+                                <a>&laquo;</a>
+                            </li>
+                            <li class="active">
+                                <a>1</a>
+                            </li>
+                            <li class="">
+                                <a>2</a>
+                            </li>
+                            <li class="">
+                                <a>3</a>
+                            </li>
+                            <li class="">
+                                <a>4</a>
+                            </li>
+                            <li class="">
+                                <a>5</a>
+                            </li>
+                            <li class="">
+                                <a>6</a>
+                            </li>
+                            <li class="">
+                                <a>7</a>
+                            </li>
+                            <li class="">
+                                <a>8</a>
+                            </li>
+                            <li class="">
+                                <a>9</a>
+                            </li>
+                            <li class="">
+                                <a>10</a>
+                            </li>
+                            <li aria-label="Next 10">
+                                <a>...</a>
+                            </li>
+                            <li aria-label="Next" class="">
+                                <a>&raquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="jobs-list">
+                    <div>
+                        <div class="row">
+                            <div class="hidden-xs job-status col-lg-1 col-sm-2">
+                                <div class="traffic-light traffic-light-muted"></div>
+                                <div>Draft</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="panel panel-job panel-muted">
+                                    <div class="panel-heading">
+                                        <a href="#">
+                                            <h4>Account Manager - Programmatic Digital Media</h4>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body text-light">
+                                        Lorem ipsum dolor amet pabst mustache gluten-free kombucha. Try-hard fam raw denim marfa. Bicycle rights kale chips celiac
+                                        whatever glossier poke readymade sriracha typewriter lumbersexual gentrify keffiyeh
+                                        vape tumeric. Squid dreamcatcher disrupt, you probably haven't heard of them enamel
+                                        pin cloud bread gochujang salvia viral normcore kale chips
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="job-detail">Added: 1/8/2017</div>
+                                        <a class="btn btn-muted pull-right" href="#">Continue editing</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="line-behind">
+                        <h4>Jobs Pending Approval</h4>
+                    </div>
+                    <div class="jobs-list">
+                        <div class="row">
+                            <div class="hidden-xs job-status col-lg-1 col-md-2 col-sm-2">
+                                <div class="traffic-light traffic-light-warning"></div>
+                                <div>Pending
+                                    <br>Approval</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="panel panel-job panel-warning">
+                                    <div class="panel-heading">
+                                        <a href="#">
+                                            <h4>Higher Education Sales Representative</h4>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body text-light">
+                                        Small batch affogato whatever microdosing flannel sartorial keytar bespoke pinterest chambray.
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="job-detail">Published: 27/2/2017</div>
+                                        <div class="job-detail">Expires: 5/12/2017</div>
+                                        <a class="btn btn-warning pull-right" href="#">View Job</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Address Details</h4>
+                            </div>
+                            <div class="panel-form">
+                                <form lpformnum="2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="form-control-static" style="white-space: pre-wrap;">&nbsp;</div>
+                                                <label class="control-label">Address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="form-control-static" style="white-space: pre-wrap;">Barcelona</div>
+                                                <label class="control-label">City / Town</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-lg pull-right">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                    Edit
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Address Details</h4>
+                            </div>
+                            <div class="panel-form">
+                                <form lpformnum="2">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <input name="street" value="" placeholder="Address" class="form-control" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                                <label class="control-label">Address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="has-value has-error form-group">
+                                                <input name="city" value="Barcelona" placeholder="City / Town" class="form-control">
+                                                <label class="control-label">City / Town</label>
+                                                <span class="help-block">Must be 60 characters or less</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="has-value form-group">
+                                                <input name="country" value="Australia" placeholder="Country" class="form-control">
+                                                <label class="control-label">Country</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <button type="submit" class="btn btn-primary btn-lg pull-right">
+                                            <span class="glyphicon glyphicon-floppy-disk"></span>
+                                            Save changes
+                                        </button>
+                                        <button class="btn btn-danger btn-lg pull-right">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Staff Contacts</h4>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <strong>Mr fred smith</strong>
+                                            <span class="label label-danger">email unconfirmed</span>
+                                            <span class="label label-success">key contact</span>
+
+                                            <br>
+                                            <div class="text-muted" style="margin-bottom: 5px;">Product manager</div>
+                                            <div>
+                                                <small class="text-muted">
+                                                    Email:
+                                                    <a href="#">kebab@test.test</a>
+                                                </small>
+                                            </div>
+                                            <div>
+                                                <small class="text-muted">
+                                                    Landline: 123456
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button class="btn btn-sm pull-right">
+                                                <span class="glyphicon glyphicon-remove"></span> disable
+                                            </button>
+                                            <button class="btn btn-sm pull-right">
+                                                <span class="glyphicon glyphicon-edit"></span> update
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-lg pull-right">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                        Invite contact
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h4>Username / Email</h4>
+                                            <p>
+                                                pete@visualeyes.net.au
+                                                <span class="label label-danger">unconfirmed</span>
+                                            </p>
+                                            <p class="text-muted">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                                Subscribed from apps
+                                            </p>
+                                            <p class="text-success">
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                                Subscribed from central
+                                            </p>
+                                        </div>
+
+                                        <div class="col-xs-4">
+                                            <a title="Change email" class="btn btn-sm pull-right tx" href="#">
+                                                <i class="glyphicon glyphicon-edit"></i>
+                                                Change email
+                                            </a>
+                                            <a title="Change subscription" class="btn btn-sm  pull-right" href="#">
+                                                <i class="glyphicon glyphicon-edit"></i>
+                                                Change subscriptions
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h4>Phone number</h4>
+                                            <p>
+                                                +34635693671
+                                                <span class="label label-success">verified</span>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a class="btn pull-right" href="#">
+                                                <i class="glyphicon glyphicon-edit"></i>
+                                                Change phone
+                                            </a>
+                                            <button type="submit" class="btn pull-right" onclick="return confirm('Are you sure you wan to remove your phone number?')">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                                Remove phone
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item">item 1</button>
+                                <button type="button" class="list-group-item">item 2</button>
+                                <button type="button" class="list-group-item">item 3</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script>(window.jQuery || document.write('<script src="/node_modules/jquery/dist/jquery.min.js"><\/script>'));</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+            crossorigin="anonymous"></script>
+        <script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal || document.write('<script src="/dist/js/bootstrap.min.js"><\/script>'));</script>
+</body>
+
+</html>

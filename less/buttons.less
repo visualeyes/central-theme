@@ -1,0 +1,83 @@
+@import './variables.less';
+
+  
+.button-variant(@color) {
+    color: @color;
+    &:hover { color: darken(@color, 10%); }
+}
+
+.btn {
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px #DDD;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    background: unset;
+    border: unset;
+    
+    &:active,
+    &:hover,
+    &.active {
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+    &:focus,
+    &.focus {
+        background-color: unset;
+    }
+    &:active,
+    &.active {
+        &:active,
+        &:hover,
+        &.active {
+            background-color: unset;
+            box-shadow: unset;
+        }
+    }
+
+    
+
+    .button-variant(@gray);
+
+    &.btn-muted {
+        .button-variant(@gray-light);
+    }
+    &.btn-primary {
+        .button-variant(@brand-primary);
+    }
+    &.btn-warning {
+        .button-variant(@brand-warning);
+    }
+    &.btn-danger {
+        .button-variant(@brand-danger);
+    }
+    &.btn-success {
+        .button-variant(@brand-success);
+    }
+    &.btn-loader {
+        .button-variant(@gray-light);
+    }
+}
+
+.panel-btn {
+    float: right;
+    margin-left: 10px;
+
+    &.panel-btn-lg {
+        font-size: larger;
+
+        .spinner {
+            width: 1.2em;
+            height: 1.2em;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}

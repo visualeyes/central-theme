@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "name": "central-theme",
+    "private": true,
+    "devDependencies": {
+        "bootstrap": "^3.3.7",
+        "gulp": "^3.9.1",
+        "gulp-cssmin": "^0.2.0",
+        "gulp-less": "^3.3.2",
+        "gulp-rimraf": "^0.2.1",
+        "gulp-sourcemaps": "^2.6.1",
+        "less-plugin-autoprefix": "^1.5.1",
+        "less-plugin-clean-css": "^1.5.1",
+        "jquery": "^3.2.1",
+        "browser-sync": "^2.18.13"
+    },
+    "scripts": {
+        "gulp": "gulp --color",
+        "less": "gulp less --color",
+        "watch": "gulp watch --color",
+        "serve": "gulp serve --color"
+    }
+}

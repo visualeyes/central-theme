@@ -1,0 +1,205 @@
+@import "./variables.less";
+
+.navbar {
+    color: white;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 20px #CCC;
+    z-index: 1;
+    border: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    margin-bottom: 0;
+
+    > li > a,
+    .navbar-nav > li > a {
+        color: white;
+        text-shadow: unset;
+    }
+
+    .text-danger, 
+    .loader-error {
+        color: black
+    }
+
+    .loader {
+        margin: 20px auto;
+        color: darken(@navbar-default-bg, 10%);
+
+        .spinner {
+            border-color: darken(@navbar-default-bg, 10%);
+            border-top-color: darken(@navbar-default-bg, 20%);
+        }
+    }
+
+    .navbar-brand {
+        color: @sidebar-link;
+        text-shadow: unset;
+        display: table-row;
+        padding-top: 8px;
+
+        &:hover {
+            color: @sidebar-link-hover;
+        }
+
+        .title {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: bold;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .logo {
+            background-repeat: no-repeat;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+    }
+
+    .navbar-toggle {
+        border-color: @navbar-default-border;
+
+        &.over, &:hover, &:focus {
+            background-color: @navbar-default-bg;
+        }
+        .icon-bar {
+            background-color: white;
+        }
+    }
+    
+    .navbar-nav {
+        border-top: 1px solid @navbar-default-border;
+        list-style: none;
+        padding: 0;
+    
+        li {
+            a {
+                border-bottom: 1px solid @navbar-default-border;
+                color: lighten(@navbar-default-bg, 30%);
+                text-align: left;
+                display: block;
+                text-transform: uppercase;
+                border-left: 5px solid @navbar-default-bg;
+                padding: 15px 5px 15px 5%;
+                
+                &:hover {
+                    border-left-color: lighten(@navbar-default-bg, 30%);
+                    background-color: darken(@navbar-default-bg, 2%);
+                    color: lighten(@navbar-default-bg, 30%);
+                }
+
+                &:focus {
+                    color: lighten(@navbar-default-bg, 30%);
+                }
+    
+                .glyphicon {
+                    font-size: 1.3em;
+                    color: lighten(@navbar-default-bg, 20%);
+                    position: relative;
+                    top: 4px;
+                    width: 20px;
+                    display: inline-block;
+                }
+            }
+    
+            &.active {
+                a, a:hover, a:focus {
+                    color: white;
+                    border-left-color: white;
+                    background-color: darken(@navbar-default-bg, 2%);
+                    background-image: unset;
+                }
+        
+                .glyphicon {
+                    color: white;
+                }
+            }
+        }
+    }
+    
+    .navbar-organisation {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    
+        h3 {
+            display: block;
+            font-size: 1.5em;
+            margin: 5px 0 15px 0;
+        }
+    }
+
+    .navbar-user {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .navbar-user,
+    .navbar-organisation {
+        a {
+            display: block;
+            cursor: pointer;
+            color: darken(@navbar-default-bg, 20%);
+            margin: 5px 0;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar {
+        padding-bottom: 20px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow-x: visible;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+
+        .navbar-nav {
+            float: unset;
+
+            > li {
+                float: unset;
+            }
+        }
+        
+        .navbar-header {
+            float: unset;
+        }
+
+        .navbar-brand {
+            float: unset;
+            display: block;
+            clear: both;
+            border-bottom: 1px solid @navbar-default-border;
+            min-height: 64.5px;
+            padding-top: 14px;
+            padding-left: 30px;
+        }
+
+        .container-fluid, .navbar-collapse {
+            padding: 0;
+        }
+
+        .navbar-user {
+            > li > a {
+                padding: 3px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .navbar .navbar-user > li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}

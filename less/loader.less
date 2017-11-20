@@ -1,0 +1,39 @@
+@import "./variables.less";
+
+.loader {
+    color: #DDD;
+    margin-top: 20px;
+
+    .spinner {
+        width: 30px;
+        height: 30px;
+    }
+    .title {
+        position: relative;
+        bottom: 11px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+}
+
+.loader-error {
+    color: @state-danger-text;
+    margin-bottom: 20px;
+  
+    > h3 {
+        margin-bottom: 10px;
+    }
+}
+
+.spinner {
+    border: 4px solid @gray-lighter;
+    border-top: 4px solid #999;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
