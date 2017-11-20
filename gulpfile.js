@@ -6,47 +6,44 @@ var gulp = require("gulp"),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create();
 
-var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
-var cleanCss = new LessCleanCss({advanced: true});
+gulp.task('less', () => gulp
+    .src('./less/theme.less')
+    .pipe(sourcemaps.init())
+    .pipe(less({ plugins: [
+        new LessAutoprefix({ browsers: ['last 2 versions'] }), 
+        new LessCleanCss({advanced: true})
+    ] }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/css')));
 
-gulp.task('less', function () {
-    return gulp
-        .src('./less/theme.less')
-        .pipe(sourcemaps.init())
-        .pipe(less({ plugins: [autoprefix, cleanCss] }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/css'));
-});
+gulp.task('fonts', () => gulp
+    .src('./node_modules/bootstrap/dist/fonts/*.*')
+    .pipe(gulp.dest('./dist/fonts')))
 
-gulp.task('fonts', function () {
-    return gulp
-        .src('./node_modules/bootstrap/dist/fonts/*.*')
-        .pipe(gulp.dest('./dist/fonts'));
+gulp.task('assets', () => gulp
+    .src('./assets/*.*')
+    .pipe(gulp.dest('./dist/assets')))
 
-})
+gulp.task('js', () => gulp
+    .src('./node_modules/bootstrap/dist/js/*.js')
+    .pipe(gulp.dest('./dist/js')));
 
-gulp.task('js', function () {
-    return gulp
-        .src('./node_modules/bootstrap/dist/js/*.js')
-        .pipe(gulp.dest('./dist/js'));
+gulp.task('clean', () => gulp
+    .src(['./dist'])
+    .pipe(rimraf()));
 
-})
+gulp.task('watch', () => gulp.watch('./less/*.less', ['less']));
 
-gulp.task('clean', function () {
-	return gulp
-		.src(['./dist'])
-		.pipe(rimraf());
-});
-
-gulp.task('watch', function () {
-    gulp.watch('./less/*.less', ['less']);
-});
-
-gulp.task('serve', ['less', 'js', 'fonts'], function() {
+gulp.task('serve', ['default'], function() {
     browserSync.init({ server: { baseDir: "./" } });
     gulp.watch(['./less/*.less', ], ['less']);
     gulp.watch(['./index.html', './dist/css/theme.css']).on("change", browserSync.reload);
 });
 
-gulp.task('default', ['less', 'fonts', 'js']);
+gulp.task('default', [
+    'less',
+    'fonts',
+    'js',
+    'assets'
+]);
     

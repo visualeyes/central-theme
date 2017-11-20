@@ -18,6 +18,6 @@
         "gulp": "gulp --color",
         "less": "gulp less --color",
         "watch": "gulp watch --color",
-        "serve": "gulp serve --color"
+        "start": "gulp serve --color"
     }
 }

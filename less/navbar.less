@@ -1,4 +1,4 @@
-@import "./variables.less";
+@import "variables.less";
 
 .navbar {
     color: white;
@@ -7,7 +7,6 @@
     box-shadow: 0 0 20px #CCC;
     z-index: 1;
     border: unset;
-    box-shadow: unset;
     border-radius: unset;
     margin-bottom: 0;
 
@@ -53,7 +52,10 @@
         }
 
         .logo {
+            background-image: url(../assets/logo.svg);
             background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
             display: table-cell;
             vertical-align: middle;
         }

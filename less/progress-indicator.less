@@ -1,0 +1,108 @@
+@import 'variables.less';
+
+@bubble-size: 24px;
+@bubble-font-size: 14px;
+@bubble-active-size: 1.5;
+@bubble-line-thickness: 3px;
+@bubble-margin: 10px;
+
+.progress-indicator {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    
+    > li {
+        flex: 1;
+        list-style: none;
+        text-align: center;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-overflow: ellipsis;
+        color: @text-muted;
+        display: block;
+        font-size: @font-size-base * 1.1;
+
+        .bubble {
+            color: white;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px #DDD;
+            font-size: @bubble-font-size;
+            font-weight: bold;
+            text-align: center;
+            width: @bubble-size;
+            height: @bubble-size;
+            background-color: lighten(@text-muted, 10%);
+            display: block;
+            margin: 0 auto @bubble-margin auto;
+            line-height: @bubble-size;
+            transition-property: width height;
+            transition-timing-function: ease-out; 
+            transition-duration: 0.1s;
+            cursor: default;
+        }
+
+        a {
+            display: inline-block;
+
+            .bubble {
+                cursor: pointer;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &:after {
+            display: block;
+            position: absolute;
+            top: @bubble-size / 2;
+            margin-left: @bubble-size / 2;
+            left: 50%;
+            width: 95%; /* -5% so the line doesn't extend past the next bubble when expanded */
+            height: @bubble-line-thickness;
+            content: '';
+            background-color: lighten(@text-muted, 10%);
+            transition-property: margin-left;
+            transition-timing-function: ease-out; 
+            transition-duration: 0.1s;
+        }
+
+        &:last-child:after {
+            content: unset;
+        }
+
+        &.completed,
+        &.active {
+            color: @text-color;
+
+            .bubble { 
+                background-color: @brand-primary;
+            }
+        }
+
+        &.active {
+            font-weight: bold;
+
+            &:after {
+                margin-left: (@bubble-size * @bubble-active-size) / 2;
+            }
+        }
+
+        &.active .bubble,
+        a:hover .bubble { 
+            margin-top: -@bubble-size * (@bubble-active-size - 1) / 2;
+            margin-bottom: @bubble-margin - (@bubble-size * (@bubble-active-size - 1) / 2);
+            font-size: @bubble-font-size * @bubble-active-size;
+            line-height: @bubble-size * @bubble-active-size;
+            width: @bubble-size * @bubble-active-size;
+            height: @bubble-size * @bubble-active-size;
+        }
+
+        &.completed:after {
+            background-color: @brand-primary;
+        }
+    }
+}
