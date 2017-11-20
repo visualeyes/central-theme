@@ -13,9 +13,11 @@
 .form-group {
     position: relative;
 
-    input.form-control {
-        padding-left: 10px;
-        padding-right: 10px;
+    input, textarea {
+        &.form-control {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     select.form-control {
@@ -48,7 +50,7 @@
         border-radius: 0;
         box-shadow: unset;
         position: relative;
-        z-index: 3;
+        z-index: 2;
 
         &:focus {
             border-color: @brand-primary;
@@ -66,44 +68,28 @@
         color: @gray-light;
         font-weight: normal;
         margin-bottom: 0;
+        transition: .1s top, .1s opacity;
+        transition-timing-function: ease-out;
+        position: relative;
+        z-index: 1;
+        top: 0;
+
+        &.out {
+            opacity: 0;
+            top: 1em;
+        }
     }
 
     /* animated labels */
-    input.form-control,
-    select.form-control,
-    .form-control-static {
-        margin-top: 2em;
-
-        + .control-label {
-            position: absolute;
-            transition: .1s bottom, .1s opacity;
-            left: 0;
-            z-index: 1;
-        }
-    }
-
-    input, select {
-        &.form-control + .control-label {
-            bottom: 50%;
-            opacity: 0;
-        }
-    }
-
-    &.has-value {
-        input, select {
-            &.form-control + .control-label {
-                bottom: 100%;
-                opacity: 1;
-            }
-        }
-    }
-
-    .form-control-static + .control-label {
-        bottom: 100%;
-        opacity: 1;
+    textarea.form-control {
+        border-width: 1px 1px 2px 1px;
     }
 }
 
 .checkbox {
     padding-left: 10px;
+
+    input {
+        top: -1px;
+    }
 }

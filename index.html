@@ -67,9 +67,11 @@
                         <div class="loader">
                             <span class="spinner"></span>
                         </div>
-                        <a>Change organisation</a>
+                        <div>
+                            <a>Change organisation</a>
+                        </div>
                     </div>
-                    <ul id="sidebar-menu" class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li role="presentation" class="active">
                             <a role="button" href="#">
                                 <span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs</a>
@@ -88,11 +90,18 @@
                         </li>
                     </ul>
                     <div class="navbar-user">
-                        <a role="button" href="#">
-                            <span class="glyphicon glyphicon-user"></span>&nbsp;pete@visualeyes.net.au</a>
-                        <a role="button" href="#">
-                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
-                        </ul>
+                        <div>
+                            <a role="button" href="#">
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;pete@visualeyes.net.au</a>
+                        </div>
+                        <div>
+                            <form>
+                                <button type="button">
+                                    <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
             </nav>
             <div class="page col-lg-10 col-lg-offset-2 col-sm-9 col-sm-offset-3">
                 <div class="page-header">
@@ -121,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <br />
 
                 <ol class="progress-indicator">
@@ -205,9 +214,13 @@
                     </li>
                 </ul>
 
+                
+                <div class="line-behind text-center text-muted">
+                    <span>or</span>
+                </div>
 
                 <div class="line-behind">
-                    <h4 class="text-muted" style="padding-left: 0px;">Drafts</h4>
+                    <h4 style="padding-left: 0px;">Drafts</h4>
                     <a href="#">
                         All draft jobs
                     </a>
@@ -289,9 +302,6 @@
                     </div>
                 </div>
                 <div>
-                    <div class="line-behind">
-                        <h4>Jobs Pending Approval</h4>
-                    </div>
                     <div class="jobs-list">
                         <div class="row">
                             <div class="hidden-xs job-status col-lg-1 col-md-2 col-sm-2">
@@ -331,14 +341,34 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <div class="form-control-static" style="white-space: pre-wrap;">&nbsp;</div>
                                                 <label class="control-label">Address</label>
+                                                <div class="form-control-static" style="white-space: pre-wrap;">&nbsp;</div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <div class="form-control-static" style="white-space: pre-wrap;">Barcelona</div>
                                                 <label class="control-label">City / Town</label>
+                                                <div class="form-control-static" style="white-space: pre-wrap;">Barcelona</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Address</label>
+                                                <div class="form-control-static">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="has-value has-error form-group">
+                                                <label class="control-label">City / Town</label>
+                                                <div class="form-control-static">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="has-value form-group">
+                                                <label class="control-label">Country</label>
+                                                <div class="form-control-static">&nbsp;</div>
                                             </div>
                                         </div>
                                     </div>
@@ -362,24 +392,35 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input name="street" value="" placeholder="Address" class="form-control" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
                                                 <label class="control-label">Address</label>
+                                                <textarea name="street" value="" class="form-control" rows="2"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="has-value has-error form-group">
-                                                <input name="city" value="Barcelona" placeholder="City / Town" class="form-control">
-                                                <label class="control-label">City / Town</label>
-                                                <span class="help-block">Must be 60 characters or less</span>
+                                            <div class="has-error form-group">
+                                                <label class="control-label out">City / Town</label>
+                                                <input name="city" placeholder="City / Town" class="form-control">
+                                                <span class="help-block">Required</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="has-value form-group">
+                                                    <label class="control-label in">Country</label>
                                                 <input name="country" value="Australia" placeholder="Country" class="form-control">
-                                                <label class="control-label">Country</label>
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                    <div class="has-value form-group">
+                                            <label class="control-label">Street</label>
+                                        <input value="45 Hillsdon Road, Taringa" class="form-control">
+                                    </div>
+                                    
+                                    <div class="has-value form-group">
+                                        <label class="control-label">Street</label>
+                                        <input value="444 Brunswick st, Fortitude Valley, 4006" class="form-control">
+                                    </div>
+
                                     <div class="panel-footer">
                                         <button type="submit" class="btn btn-primary btn-lg pull-right">
                                             <span class="glyphicon glyphicon-floppy-disk"></span>
@@ -445,7 +486,7 @@
                             <div class="list-group">
                                 <div class="list-group-item">
                                     <div class="row">
-                                        <div class="col-xs-8">
+                                        <div class="col-sm-8">
                                             <h4>Username / Email</h4>
                                             <p>
                                                 pete@visualeyes.net.au
@@ -461,7 +502,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="col-xs-4">
+                                        <div class="col-sm-4">
                                             <a title="Change email" class="btn btn-sm pull-right tx" href="#">
                                                 <i class="glyphicon glyphicon-edit"></i>
                                                 Change email

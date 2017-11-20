@@ -22,9 +22,12 @@
 
 @list-group-border: @gray-lighter;
 
-// Custom components
 @navbar-default-bg: #599AB2;
-
-@sidebar-border: #4889A0;
-@sidebar-link: #3F6D7E;
-@sidebar-link-hover: darken(@sidebar-link, 10%);
+@navbar-default-border: #4889A0;
+@navbar-default-brand-color: #3F6D7E;
+@navbar-default-brand-hover-color: darken(@navbar-default-brand-color, 10%);
+@navbar-default-link-color: lighten(@navbar-default-bg, 30%);
+@navbar-default-link-hover-bg: darken(@navbar-default-bg, 2%);
+@navbar-default-link-hover-color: @navbar-default-link-color;
+@navbar-default-link-active-bg: darken(@navbar-default-bg, 2%);
+@navbar-default-link-active-color: white;

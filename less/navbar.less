@@ -10,12 +10,6 @@
     border-radius: unset;
     margin-bottom: 0;
 
-    > li > a,
-    .navbar-nav > li > a {
-        color: white;
-        text-shadow: unset;
-    }
-
     .text-danger, 
     .loader-error {
         color: black
@@ -32,14 +26,9 @@
     }
 
     .navbar-brand {
-        color: @sidebar-link;
         text-shadow: unset;
         display: table-row;
         padding-top: 8px;
-
-        &:hover {
-            color: @sidebar-link-hover;
-        }
 
         .title {
             font-size: 16px;
@@ -66,7 +55,7 @@
         border-color: @navbar-default-border;
 
         &.over, &:hover, &:focus {
-            background-color: @navbar-default-bg;
+            background-color: darken(@navbar-default-bg, 2%);
         }
         .icon-bar {
             background-color: white;
@@ -81,21 +70,14 @@
         li {
             a {
                 border-bottom: 1px solid @navbar-default-border;
-                color: lighten(@navbar-default-bg, 30%);
                 text-align: left;
                 display: block;
                 text-transform: uppercase;
                 border-left: 5px solid @navbar-default-bg;
                 padding: 15px 5px 15px 5%;
                 
-                &:hover {
-                    border-left-color: lighten(@navbar-default-bg, 30%);
-                    background-color: darken(@navbar-default-bg, 2%);
-                    color: lighten(@navbar-default-bg, 30%);
-                }
-
-                &:focus {
-                    color: lighten(@navbar-default-bg, 30%);
+                &:hover, &:focus {
+                    border-left-color: @navbar-default-link-color;
                 }
     
                 .glyphicon {
@@ -112,7 +94,6 @@
                 a, a:hover, a:focus {
                     color: white;
                     border-left-color: white;
-                    background-color: darken(@navbar-default-bg, 2%);
                     background-image: unset;
                 }
         
@@ -137,20 +118,21 @@
     .navbar-user {
         margin-top: 15px;
         margin-bottom: 15px;
+        text-align: center;
     }
 
     .navbar-user,
     .navbar-organisation {
-        a {
-            display: block;
+        a, button {
+            border: unset;
+            background: unset;
             cursor: pointer;
-            color: darken(@navbar-default-bg, 20%);
+            color: @navbar-default-brand-color;
             margin: 5px 0;
 
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 text-decoration: none;
-                color: white;
+                color: @navbar-default-brand-hover-color;
             }
         }
     }
