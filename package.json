@@ -2,10 +2,8 @@
     "version": "1.0.0",
     "name": "central-theme",
     "private": true,
-    "dependencies": {
-        "bootstrap": "^3.3.7"
-    },
     "devDependencies": {
+        "bootstrap": "^3.3.7",
         "gulp": "^3.9.1",
         "gulp-cssmin": "^0.2.0",
         "gulp-less": "^3.3.2",
@@ -21,7 +19,8 @@
         "assets",
         "less",
         "gulpfile.js",
-        "README.md"
+        "README.md",
+        "./node_modules/bootstrap/less/variables.less"
     ],
     "scripts": {
         "gulp": "gulp --color",
