@@ -14,6 +14,13 @@
         "jquery": "^3.2.1",
         "browser-sync": "^2.18.13"
     },
+    "files": [
+        "dist",
+        "assets",
+        "less",
+        "gulpfile.js",
+        "README.md"
+    ],
     "scripts": {
         "gulp": "gulp --color",
         "less": "gulp less --color",
