@@ -6,12 +6,16 @@ var gulp = require("gulp"),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create();
 
-gulp.task('less', () => gulp
+gulp.task('variables', () => gulp
+    .src('./node_modules/bootstrap/less/variables.less')
+    .pipe(gulp.dest('./less/bootstrap')))
+
+gulp.task('less', ['variables'], () => gulp
     .src('./less/theme.less')
     .pipe(sourcemaps.init())
     .pipe(less({ plugins: [
         new LessAutoprefix({ browsers: ['last 2 versions'] }), 
-        new LessCleanCss({advanced: true})
+        new LessCleanCss({advanced: true}),
     ] }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css')));

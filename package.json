@@ -19,8 +19,7 @@
         "assets",
         "less",
         "gulpfile.js",
-        "README.md",
-        "./node_modules/bootstrap/less/variables.less"
+        "README.md"
     ],
     "scripts": {
         "gulp": "gulp --color",
