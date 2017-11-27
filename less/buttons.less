@@ -3,7 +3,9 @@
 .button-variant(@color) {
     color: @color;
 
-    &:hover { 
+    &:active,
+    &:hover,
+    &.active { 
         color: darken(@color, 10%);
     }
 }
@@ -18,10 +20,12 @@
     border-radius: unset;
     background: unset;
     border: unset;
+    color: black;
     
     &:active,
     &:hover,
     &.active {
+        color: lighten(black, 20%);
         background-color: unset;
         box-shadow: unset;
     }
@@ -37,8 +41,6 @@
             box-shadow: unset;
         }
     }
-
-    .button-variant(@gray);
 
     &.btn-muted {
         .button-variant(@gray-light);
@@ -58,24 +60,13 @@
     &.btn-loader {
         .button-variant(@gray-light);
     }
-}
 
-.panel-btn {
-    float: right;
-    margin-left: 10px;
-
-    &.panel-btn-lg {
-        font-size: larger;
-
+    &.btn-lg {
         .spinner {
             width: 1.2em;
             height: 1.2em;
-            position: relative;
-            top: 2px;
+            float: left;
+            margin-right: 5px;
         }
-    }
-
-    &:hover {
-        text-decoration: none;
     }
 }

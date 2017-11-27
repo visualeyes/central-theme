@@ -21,19 +21,35 @@
     }
 
     select.form-control {
-        color: @gray-light;
         padding-left: 7px;
         padding-right: 7px;
+
+        &.placeholder {
+            color: @gray-light;
+        }
     }
 
     h2 {
         margin: 0;
+    }
+    
+    .checkbox label {
+        font-size: 1.2em;
+        margin-bottom: 5px;
     }
 
     .form-control,
     .form-control-static {
         font-size: 1.2em;
         font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        &.form-control {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
     }
 
     .form-control-static {

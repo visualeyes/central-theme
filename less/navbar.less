@@ -25,6 +25,10 @@
         }
     }
 
+    .navbar-header + .navbar-collapse > .navbar-nav:first-child {
+        border-top: none;
+    }
+
     .navbar-brand {
         text-shadow: unset;
         display: table-row;
@@ -48,7 +52,6 @@
             display: table-cell;
             vertical-align: middle;
         }
-        
     }
 
     .navbar-toggle {
@@ -66,6 +69,8 @@
         border-top: 1px solid @navbar-default-border;
         list-style: none;
         padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
     
         li {
             a {
