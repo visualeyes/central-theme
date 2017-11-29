@@ -1,4 +1,5 @@
 @import 'variables.less';
+@import "../node_modules/bootstrap/less/mixins.less";
 
 .formGroupState(@borderColor) {
     .form-control {
@@ -12,6 +13,7 @@
 
 .form-group {
     position: relative;
+    margin-bottom: 20px;
 
     input, textarea {
         &.form-control {
@@ -20,22 +22,21 @@
         }
     }
 
+    textarea.form-control {
+        background-color: #F6F6F6;
+    }
+
     select.form-control {
         padding-left: 7px;
         padding-right: 7px;
 
         &.placeholder {
-            color: @gray-light;
+            color: @input-color-placeholder;
         }
     }
 
     h2 {
         margin: 0;
-    }
-    
-    .checkbox label {
-        font-size: 1.2em;
-        margin-bottom: 5px;
     }
 
     .form-control,
@@ -43,6 +44,10 @@
         font-size: 1.2em;
         font-weight: bold;
         margin-bottom: 5px;
+
+        &.input-lg {
+            font-size: 2.6em;
+        }
     }
 
     input, select {
@@ -63,7 +68,6 @@
         border-width: 0 0 2px 0;
         border-color: @gray-lighter;
         outline: 0;
-        border-radius: 0;
         box-shadow: unset;
         position: relative;
         z-index: 2;
@@ -108,4 +112,19 @@
     input {
         top: -1px;
     }
+    label {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    .help-block {
+        margin-top: 0;
+        padding-left: 20px;
+    }
+    &.checked label {
+        font-weight: bold;
+    }
+}
+
+.help-block {
+    margin-bottom: 5px;
 }

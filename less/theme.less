@@ -84,6 +84,21 @@ ul.pagination > li > a {
   padding-bottom: 100px;
 }
 
+.list-group-item {
+  &.disabled {
+    background-color: #F6F6F6;
+  
+    &:hover {
+      background-color: #F6F6F6;
+    }
+  }
+  &.toggled {
+    background-color: lighten(@brand-primary, 40%);
+  }
+}
+
+
+
 @media (min-width: @screen-sm-min) {
   .page {
     padding-left: 30px;

@@ -105,15 +105,15 @@
             </nav>
             <div class="page col-lg-10 col-lg-offset-2 col-sm-9 col-sm-offset-3">
                 <div class="page-header">
-                    <h2>
-                        <span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs
+                    <h1>
+                        Jobs
                         <a class="btn btn-primary" href="#">
                             <span class="glyphicon glyphicon-plus"></span>&nbsp;Add new job
                         </a>
                         <a class="btn" href="#">
                             <i class="glyphicon glyphicon-chevron-left"></i> Back
                         </a>
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="row">
@@ -121,6 +121,10 @@
                         <div class="loader">
                             <div class="spinner" title="loading">&nbsp;</div>
                             <span class="title">loader...</span>
+                        </div>
+                        <div class="loader">
+                            <div class="spinner" title="loading">&nbsp;</div>
+                            <span class="title">loader 2...</span>
                         </div>
                     </div>
                     <div class="col-xs-6">
@@ -344,6 +348,11 @@
                             </div>
                             <div class="panel-form">
                                 <form lpformnum="2">
+                                    <div class="form-group">
+                                        <label class="control-label">Name</label>
+                                        <div name="street" class="form-control-static input-lg">Megacorp PTY LTD</div>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
@@ -395,11 +404,16 @@
                             </div>
                             <div class="panel-form">
                                 <form lpformnum="2">
+                                    <div class="form-group">
+                                        <label class="control-label">Name</label>
+                                        <input name="street" value="Megacorp PTY LTD" class="form-control input-lg"></input>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <label class="control-label">Address</label>
-                                                <textarea name="street" value="" class="form-control" rows="2">444 Brunswick st
+                                                <label class="control-label" for="street">Address</label>
+                                                <textarea name="street" class="form-control" rows="2">444 Brunswick st
 Fortitude Valley, 4006</textarea>
                                             </div>
                                         </div>
@@ -450,6 +464,16 @@ Fortitude Valley, 4006</textarea>
                                         <input value="444 Brunswick st, Fortitude Valley, 4006" class="form-control">
                                     </div>
 
+                                    <div class="form-group">
+                                        <div class="checked checkbox">
+                                            <label>
+                                                <input type="checkbox" name="keyContact" checked value="true">
+                                                Key contact
+                                            </label>
+                                            <span class="help-block">The contact will recieve emails on the organisation's behalf</span>
+                                        </div>
+                                    </div>
+
                                     <div class="panel-footer">
                                         <button type="submit" class="btn btn-primary btn-lg pull-right">
                                             <span class="glyphicon glyphicon-floppy-disk"></span>
@@ -459,7 +483,7 @@ Fortitude Valley, 4006</textarea>
                                             <span class="glyphicon glyphicon-remove"></span>
                                             Cancel
                                         </button>
-                                        <div class="btn btn-muted btn-lg pull-right">
+                                        <div class="btn btn-muted btn-lg pull-right" style="font-weight: unset; text-transform: unset">
                                             <span class="spinner">&nbsp;</span>
                                             Saving
                                         </div>
@@ -500,17 +524,49 @@ Fortitude Valley, 4006</textarea>
                                                 <span class="glyphicon glyphicon-remove"></span> disable
                                             </button>
                                             <button class="btn btn-sm pull-right">
-                                                <span class="glyphicon glyphicon-edit"></span> update
+                                                <span class="glyphicon glyphicon-edit"></span> edit
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="panel-footer">
-                                    <button class="btn btn-lg pull-right">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                        Invite contact
-                                    </button>
+                                <div class="list-group-item toggled">
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h4>Mr editing man</h4>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button class="btn btn-sm pull-right">
+                                                <span class="glyphicon glyphicon-remove"></span> cancel
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="list-group-item disabled">
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <strong>Mr disabled man</strong>
+                                            <span class="label label-default">disabled</span>
+
+                                            <br>
+                                            <div class="text-muted" style="margin-bottom: 5px;">Product manager</div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button class="btn btn-sm pull-right">
+                                                <span class="glyphicon glyphicon-edit"></span> restore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-lg pull-right">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    Invite contact
+                                </button>
                             </div>
                         </div>
 
@@ -520,19 +576,21 @@ Fortitude Valley, 4006</textarea>
                             </div>
                             <div class="panel-body">
                                 <div class="form-group">
-                                    <div>
-                                        <div class="checkbox">
-                                            <label title="">
-                                                <input type="checkbox" value="on">Agriculture, Forestry and Fishing</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label title="">
-                                                <input type="checkbox">Mining</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label title="">
-                                                <input type="checkbox">Manufacturing</label>
-                                        </div>
+                                    <span class="help-block">Select the industries which your organisation works within:</span>
+                                    <div class="checkbox checked">
+                                        <label>
+                                            <input type="checkbox" checked> Agriculture, Forestry and Fishing
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Mining
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Manufacturing
+                                        </label>
                                     </div>
                                 </div>
                             </div>

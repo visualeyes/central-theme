@@ -24,6 +24,18 @@
     border-radius: 10px;
     margin-bottom: 25px;
 
+    > .list-group{
+        &:first-child {
+            padding-top: 5px;
+        }
+        &:last-child {
+            padding-bottom: 5px;
+        }
+        + .list-group > .list-group-item:first-child {
+            border-top: none;
+        }
+    }
+
     > .panel-heading {
         background-image: none;
         background-color: unset;
