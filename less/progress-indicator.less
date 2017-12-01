@@ -10,7 +10,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     
     > li {
         flex: 1;
@@ -46,10 +46,7 @@
 
         a {
             display: inline-block;
-
-            .bubble {
-                cursor: pointer;
-            }
+            cursor: pointer;
             &:hover {
                 text-decoration: none;
             }
@@ -71,7 +68,7 @@
         }
 
         &:last-child:after {
-            content: unset;
+            content: none;
         }
 
         &.completed,

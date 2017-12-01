@@ -6,7 +6,7 @@
         border-color: @borderColor;
 
         &:focus {
-            box-shadow: unset;
+            box-shadow: none;
         }
     }
 }
@@ -32,6 +32,10 @@
 
         &.placeholder {
             color: @input-color-placeholder;
+
+            &:focus, &:active {
+                color: @input-color;
+            }
         }
     }
 
@@ -68,7 +72,7 @@
         border-width: 0 0 2px 0;
         border-color: @gray-lighter;
         outline: 0;
-        box-shadow: unset;
+        box-shadow: none;
         position: relative;
         z-index: 2;
 
@@ -127,4 +131,12 @@
 
 .help-block {
     margin-bottom: 5px;
+}
+
+legend {
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
 }

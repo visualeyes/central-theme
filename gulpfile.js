@@ -39,7 +39,7 @@ gulp.task('clean', () => gulp
 gulp.task('watch', () => gulp.watch('./less/*.less', ['less']));
 
 gulp.task('serve', ['default'], function() {
-    browserSync.init({ server: { baseDir: "./" } });
+    browserSync.init({ server: { baseDir: "./" }, port: 3001 });
     gulp.watch(['./less/*.less', ], ['less']);
     gulp.watch(['./index.html', './dist/css/theme.css']).on("change", browserSync.reload);
 });

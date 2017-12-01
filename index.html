@@ -390,9 +390,16 @@
                                 </form>
                             </div>
                             <div class="panel-footer">
-                                <button class="btn btn-lg pull-right">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                    Edit
+                                <button class="btn btn-sm btn-muted">
+                                    Save as draft
+                                </button>
+                                <button class="btn btn-xl btn-primary pull-right" disabled>
+                                    <div class="spinner">&nbsp;</div>
+                                    Publish
+                                </button>
+                                <button class="btn btn-lg btn-primary pull-right">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>Next<br />
+                                    <small class="text-muted">2 - Industries</small>
                                 </button>
                             </div>
                         </div>
@@ -404,86 +411,94 @@
                             </div>
                             <div class="panel-form">
                                 <form lpformnum="2">
-                                    <div class="form-group">
-                                        <label class="control-label">Name</label>
-                                        <input name="street" value="Megacorp PTY LTD" class="form-control input-lg"></input>
-                                    </div>
+                                    
+                                    <fieldset>
+                                            <legend>Description</legend>
+                                        <div class="form-group">
+                                            <label class="control-label">Name</label>
+                                            <input name="street" value="Megacorp PTY LTD" class="form-control input-lg"></input>
+                                        </div>
 
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label class="control-label" for="street">Address</label>
-                                                <textarea name="street" class="form-control" rows="2">444 Brunswick st
-Fortitude Valley, 4006</textarea>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="street">Address</label>
+                                                    <textarea name="street" class="form-control" rows="2">444 Brunswick st
+    Fortitude Valley, 4006</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="has-error form-group">
+                                                    <label class="control-label out">City / Town</label>
+                                                    <input name="city" placeholder="City / Town" class="form-control">
+                                                    <span class="help-block">Required</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label in">Country</label>
+                                                    <input name="country" value="Australia" placeholder="Country" class="form-control">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="has-error form-group">
-                                                <label class="control-label out">City / Town</label>
-                                                <input name="city" placeholder="City / Town" class="form-control">
-                                                <span class="help-block">Required</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label class="control-label in">Country</label>
-                                                <input name="country" value="Australia" placeholder="Country" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label class="control-label">Street</label>
-                                                <input value="45 Hillsdon Road, Taringa" class="form-control">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">Street</label>
+                                                    <input value="45 Hillsdon Road, Taringa" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label out">Scope</label>
+                                                    <select class="form-control placeholder">
+                                                        <option>Scope</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">Scope</label>
+                                                    <select class="form-control">
+                                                        <option>Local</option>
+                                                        <option>Statewide</option>
+                                                        <option>National</option>
+                                                        <option>International</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label class="control-label out">Scope</label>
-                                                <select class="form-control placeholder">
-                                                    <option>Scope</option>
-                                                </select>
-                                            </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Street</label>
+                                            <input value="444 Brunswick st, Fortitude Valley, 4006" class="form-control">
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label class="control-label">Scope</label>
-                                                <select class="form-control">
-                                                    <option>Local</option>
-                                                    <option>Statewide</option>
-                                                    <option>National</option>
-                                                    <option>International</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Street</label>
-                                        <input value="444 Brunswick st, Fortitude Valley, 4006" class="form-control">
-                                    </div>
+                                    </fieldset>
 
-                                    <div class="form-group">
-                                        <div class="checked checkbox">
-                                            <label>
-                                                <input type="checkbox" name="keyContact" checked value="true">
-                                                Key contact
-                                            </label>
-                                            <span class="help-block">The contact will recieve emails on the organisation's behalf</span>
+                                    <br />
+                                    <fieldset>
+                                        <legend>Contact Details</legend>
+                                        <div class="form-group">
+                                            <div class="checked checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="keyContact" checked value="true">
+                                                    Key contact
+                                                </label>
+                                                <span class="help-block">The contact will recieve emails on the organisation's behalf</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </fieldset>
 
                                     <div class="panel-footer">
-                                        <button type="submit" class="btn btn-primary btn-lg pull-right">
+                                        <button type="submit" class="btn btn-primary pull-right">
                                             <span class="glyphicon glyphicon-floppy-disk"></span>
                                             Save changes
                                         </button>
-                                        <button class="btn btn-danger btn-lg pull-right">
+                                        <button class="btn btn-danger pull-right">
                                             <span class="glyphicon glyphicon-remove"></span>
                                             Cancel
                                         </button>
-                                        <div class="btn btn-muted btn-lg pull-right" style="font-weight: unset; text-transform: unset">
+                                        <div class="btn btn-muted pull-right" style="font-weight: normal; text-transform: normal">
                                             <span class="spinner">&nbsp;</span>
                                             Saving
                                         </div>
@@ -520,10 +535,10 @@ Fortitude Valley, 4006</textarea>
                                             </div>
                                         </div>
                                         <div class="col-xs-4">
-                                            <button class="btn btn-sm pull-right">
+                                            <button class="btn btn-xs pull-right">
                                                 <span class="glyphicon glyphicon-remove"></span> disable
                                             </button>
-                                            <button class="btn btn-sm pull-right">
+                                            <button class="btn btn-xs pull-right">
                                                 <span class="glyphicon glyphicon-edit"></span> edit
                                             </button>
                                         </div>
@@ -539,7 +554,7 @@ Fortitude Valley, 4006</textarea>
                                             <br>
                                         </div>
                                         <div class="col-xs-4">
-                                            <button class="btn btn-sm pull-right">
+                                            <button class="btn btn-xs pull-right">
                                                 <span class="glyphicon glyphicon-remove"></span> cancel
                                             </button>
                                         </div>
@@ -555,7 +570,7 @@ Fortitude Valley, 4006</textarea>
                                             <div class="text-muted" style="margin-bottom: 5px;">Product manager</div>
                                         </div>
                                         <div class="col-xs-4">
-                                            <button class="btn btn-sm pull-right">
+                                            <button class="btn btn-xs pull-right">
                                                 <span class="glyphicon glyphicon-edit"></span> restore
                                             </button>
                                         </div>
@@ -563,7 +578,7 @@ Fortitude Valley, 4006</textarea>
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <button class="btn btn-lg pull-right">
+                                <button class="btn pull-right">
                                     <span class="glyphicon glyphicon-plus"></span>
                                     Invite contact
                                 </button>
@@ -618,11 +633,11 @@ Fortitude Valley, 4006</textarea>
                                         </div>
 
                                         <div class="col-sm-4">
-                                            <a title="Change email" class="btn btn-sm pull-right tx" href="#">
+                                            <a title="Change email" class="btn btn-xs pull-right tx" href="#">
                                                 <i class="glyphicon glyphicon-edit"></i>
                                                 Change email
                                             </a>
-                                            <a title="Change subscription" class="btn btn-sm  pull-right" href="#">
+                                            <a title="Change subscription" class="btn btn-xs  pull-right" href="#">
                                                 <i class="glyphicon glyphicon-edit"></i>
                                                 Change subscriptions
                                             </a>
@@ -640,11 +655,11 @@ Fortitude Valley, 4006</textarea>
                                             </p>
                                         </div>
                                         <div class="col-xs-4">
-                                            <a class="btn pull-right" href="#">
+                                            <a class="btn btn-xs pull-right" href="#">
                                                 <i class="glyphicon glyphicon-edit"></i>
                                                 Change phone
                                             </a>
-                                            <button type="submit" class="btn pull-right" onclick="return confirm('Are you sure you wan to remove your phone number?')">
+                                            <button type="submit" class="btn btn-xs pull-right" onclick="return confirm('Are you sure you wan to remove your phone number?')">
                                                 <i class="glyphicon glyphicon-remove"></i>
                                                 Remove phone
                                             </button>

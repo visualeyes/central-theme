@@ -6,8 +6,8 @@
     text-align: center;
     box-shadow: 0 0 20px #CCC;
     z-index: 1;
-    border: unset;
-    border-radius: unset;
+    border: none;
+    border-radius: 0;
     margin-bottom: 0;
 
     .text-danger, 
@@ -30,7 +30,7 @@
     }
 
     .navbar-brand {
-        text-shadow: unset;
+        text-shadow: none;
         display: table-row;
         padding-top: 8px;
 
@@ -99,7 +99,7 @@
                 a, a:hover, a:focus {
                     color: white;
                     border-left-color: white;
-                    background-image: unset;
+                    background-image: none;
                 }
         
                 .glyphicon {
@@ -129,8 +129,8 @@
     .navbar-user,
     .navbar-organisation {
         a, button {
-            border: unset;
-            background: unset;
+            border: none;
+            background: transparent;
             cursor: pointer;
             color: @navbar-default-brand-color;
             margin: 5px 0;
@@ -154,19 +154,19 @@
         overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 
         .navbar-nav {
-            float: unset;
+            float: none;
 
             > li {
-                float: unset;
+                float: none;
             }
         }
         
         .navbar-header {
-            float: unset;
+            float: none;
         }
 
         .navbar-brand {
-            float: unset;
+            float: none;
             display: block;
             clear: both;
             border-bottom: 1px solid @navbar-default-border;
