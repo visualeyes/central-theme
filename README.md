@@ -11,5 +11,7 @@ User npm link to see changes from this project in directly app / identity
 npm link
 cd ../App
 npm link central-theme
+cd ../Identity
+npm link central-theme
 ```
 [customizing-create-react-app](https://medium.com/@tacomanator/customizing-create-react-app-aa9ffb88165)
