@@ -1,23 +1,38 @@
 @import "variables.less";
 
+.loader-size(@size) {
+    line-height: @size;
+
+    .spinner {
+        width: @size;
+        height: @size;
+    }
+}
+
 .loader {
     display: inline-block;
     color: #DDD;
-    margin-top: 20px;
-    margin-right: 20px;
 
     .spinner {
         width: 30px;
         height: 30px;
     }
     .title {
-        vertical-align: middle;
-        margin-left: 10px;
+        vertical-align: top;
+        display: inline-block;
         font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .loader-size(30px);
+
+    &.loader-sm { 
+        .loader-size(20px);
     }
 }
 
 .loader-error {
+    display: inline-block;
     color: @state-danger-text;
     margin-bottom: 20px;
   

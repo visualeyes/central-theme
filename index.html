@@ -129,7 +129,7 @@
                     </div>
                     <div class="col-xs-6">
                         <div class="loader-error">
-                            <h3>Errors</h3>
+                            <h4>Errors</h4>
                             loader errors
                         </div>
                     </div>
@@ -144,15 +144,15 @@
                             Position
                         </a>
                     </li>
-                    <li class="completed">
-                        <a>
-                            <span class="bubble">2</span>
-                            Contact Details
-                        </a>
+                    <li class="completed active">
+                        <span class="bubble">2</span>
+                        Contact Details
                     </li>
-                    <li class="active">
-                        <span class="bubble">3</span>
-                        Application Info
+                    <li class="">
+                        <a>
+                            <span class="bubble">3</span>
+                            Application Info
+                        </a>
                     </li>
                     <li class="disabled">
                         <span class="bubble">4</span>
@@ -332,7 +332,17 @@
                                     <div class="panel-footer">
                                         <div class="job-detail">Published: 27/2/2017</div>
                                         <div class="job-detail">Expires: 5/12/2017</div>
-                                        <a class="btn btn-warning pull-right" href="#">View Job</a>
+
+                                        <div class="pull-right">
+                                            <div class="loader-error loader-sm" style="position: relative; top: 5px;">
+                                                <h4>Service errors</h4>
+                                                some error
+                                            </div>
+                                            <div class="loader loader-sm" style="position: relative; top: 5px;">
+                                                <div class="spinner">&nbsp;</div>
+                                            </div>
+                                            <a class="btn btn-warning" href="#">View Job</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -393,6 +403,14 @@
                                 <button class="btn btn-sm btn-muted">
                                     Save as draft
                                 </button>
+
+                                <div class="pull-right text-right">
+                                    <button class="btn btn-lg btn-primary" disabled style="padding-bottom: 0; padding-right: 0;">
+                                        <div class="spinner">&nbsp;</div></span>Next<br />
+                                    </button><br />
+                                    <small class="text-muted" style="font-size: larger; text-transform: uppercase">3 - Publish</small>
+                                </div>
+
                                 <button class="btn btn-xl btn-primary pull-right" disabled>
                                     <div class="spinner">&nbsp;</div>
                                     Publish
@@ -469,9 +487,28 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Street</label>
-                                            <input value="444 Brunswick st, Fortitude Valley, 4006" class="form-control">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">Country</label>
+                                                    <div class="loader">
+                                                        <div class="spinner" title="loading">&nbsp;</div>
+                                                        <span class="title">Fetching countries</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">Country</label>
+                                                    <div class="loader-error">
+                                                        <h4>Service Errors</h4>
+                                                        500 timeout
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                
+                                            </div>
                                         </div>
                                     </fieldset>
 
@@ -540,22 +577,6 @@
                                             </button>
                                             <button class="btn btn-xs pull-right">
                                                 <span class="glyphicon glyphicon-edit"></span> edit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item toggled">
-                                    <div class="row">
-                                        <div class="col-xs-8">
-                                            <h4>Mr editing man</h4>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <button class="btn btn-xs pull-right">
-                                                <span class="glyphicon glyphicon-remove"></span> cancel
                                             </button>
                                         </div>
                                     </div>

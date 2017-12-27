@@ -41,7 +41,6 @@
             transition-property: width height color;
             transition-timing-function: ease-out; 
             transition-duration: 0.1s;
-            cursor: default;
         }
 
         a {
@@ -62,7 +61,7 @@
             left: 50%;
             width: 95%; /* -5% so the line doesn't extend past the next bubble when expanded */
             height: @bubble-line-thickness;
-            background-color: lighten(@text-muted, 10%);
+            background: linear-gradient(to right, @brand-primary 10%,#D4D4D4);
             transition-property: margin-left color;
             transition-timing-function: ease-out; 
             transition-duration: 0.1s;
@@ -73,19 +72,19 @@
         }
 
         &.disabled {
-            color: @text-muted;;
+            color: @text-muted;
 
+            &:after {
+                background: #D4D4D4;
+            }
             .bubble { 
                 background-color: lighten(@text-muted, 10%);
+                cursor: default;
             }
         }
 
         &.active {
             font-weight: bold;
-
-            &:after {
-                margin-left: (@bubble-size * @bubble-active-size) / 2;
-            }
         }
 
         &.active .bubble,
@@ -99,7 +98,7 @@
         }
 
         &.completed:after {
-            background-color: @brand-primary;
+            background: @brand-primary;
         }
     }
 }
