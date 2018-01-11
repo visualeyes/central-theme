@@ -19,8 +19,8 @@
     }
 
     .spinner {
-        width: @size + 4px;
-        height: @size + 4px;
+        width: @size + 1px;
+        height: @size + 1px;
         margin-right: @size / 3;
     }
 }
@@ -78,6 +78,8 @@
 
     .spinner {
         float: left;
+        position: relative;
+        top: 1px;
     }
 
     .button-size(15px);
@@ -86,20 +88,29 @@
         .button-size(11px);
         padding-top: @padding-small-vertical;
         padding-bottom: @padding-small-vertical;
+
+        .spinner {
+            top: 2px;
+            border-width: 3px;
+        }
     }
     &.btn-sm {
-        .button-size(13px);
+        .button-size(13px); 
+        .spinner {
+            border-width: 3px;
+        }
     }
     &.btn-lg {
         .button-size(20px);
         line-height: 1.4;
+        .spinner {
+            top: 3px;
+        }
     }
     &.btn-xl {
         .button-size(30px);
-
         .spinner {
-            position: relative;
-            top: 3px;
+            top: 5px;
         }
     }
 }

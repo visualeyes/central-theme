@@ -102,6 +102,7 @@
                             </form>
                         </div>
                     </div>
+                </div>
             </nav>
             <div class="page col-lg-10 col-lg-offset-2 col-sm-9 col-sm-offset-3">
                 <div class="page-header">
@@ -138,43 +139,18 @@
                 <br />
 
                 <ol class="progress-indicator">
-                    <li class="completed">
-                        <a>
-                            <span class="bubble">1</span>
-                            Position
-                        </a>
-                    </li>
-                    <li class="completed active">
-                        <span class="bubble">2</span>
-                        Contact Details
-                    </li>
-                    <li class="">
-                        <a>
-                            <span class="bubble">3</span>
-                            Application Info
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <span class="bubble">4</span>
-                        Distribution
-                    </li>
-                    <li class="disabled">
-                        <span class="bubble">5</span>
-                        Publish
-                    </li>
+                    <li class="completed"><a><span class="bubble">1</span> Position</a></li>
+                    <li class="completed active"><span class="bubble">2</span> Contact Details</li>
+                    <li class=""><a><span class="bubble">3</span> Application Info</a></li>
+                    <li class="disabled"><span class="bubble">4</span> Distribution</li>
+                    <li class="disabled"><span class="bubble">5</span> Publish</li>
                 </ol>
 
                 <br />
 
                 <ol class="progress-indicator">
-                    <li class="completed">
-                        <span class="bubble">1</span>
-                        Submit Email
-                    </li>
-                    <li class="active">
-                        <span class="bubble">2</span>
-                        Verify Email
-                    </li>
+                    <li class="completed"><span class="bubble">1</span> Submit Email</li>
+                    <li class="active"><span class="bubble">2</span> Verify Email</li>
                 </ol>
 
                 <br />
@@ -204,24 +180,12 @@
                 </div>
 
                 <ul class="nav-inline nav" style="text-align: center; margin-top: -10px;">
-                    <li role="presentation" class="active">
-                        <a role="button" href="#">Dashboard</a>
-                    </li>
-                    <li role="presentation" class="">
-                        <a role="button" href="#">draft</a>
-                    </li>
-                    <li role="presentation" class="">
-                        <a role="button" href="#">pending</a>
-                    </li>
-                    <li role="presentation" class="">
-                        <a role="button" href="#">active</a>
-                    </li>
-                    <li role="presentation" class="">
-                        <a role="button" href="#">expired</a>
-                    </li>
-                    <li role="presentation" class="">
-                        <a role="button" href="#">all</a>
-                    </li>
+                    <li role="presentation" class="active"><a role="button" href="#">Dashboard</a></li>
+                    <li role="presentation" class=""><a role="button" href="#">draft</a></li>
+                    <li role="presentation" class=""><a role="button" href="#">pending</a></li>
+                    <li role="presentation" class=""><a role="button" href="#">active</a></li>
+                    <li role="presentation" class=""><a role="button" href="#">expired</a></li>
+                    <li role="presentation" class=""><a role="button" href="#">all</a></li>
                 </ul>
 
 
@@ -239,45 +203,19 @@
                 <div class="text-center">
                     <nav aria-label="Page navigation">
                         <ul class="pagination" style="margin-top: 5px;">
-                            <li aria-label="Previous" class="disabled">
-                                <a>&laquo;</a>
-                            </li>
-                            <li class="active">
-                                <a>1</a>
-                            </li>
-                            <li class="">
-                                <a>2</a>
-                            </li>
-                            <li class="">
-                                <a>3</a>
-                            </li>
-                            <li class="">
-                                <a>4</a>
-                            </li>
-                            <li class="">
-                                <a>5</a>
-                            </li>
-                            <li class="">
-                                <a>6</a>
-                            </li>
-                            <li class="">
-                                <a>7</a>
-                            </li>
-                            <li class="">
-                                <a>8</a>
-                            </li>
-                            <li class="">
-                                <a>9</a>
-                            </li>
-                            <li class="">
-                                <a>10</a>
-                            </li>
-                            <li aria-label="Next 10">
-                                <a>...</a>
-                            </li>
-                            <li aria-label="Next" class="">
-                                <a>&raquo;</a>
-                            </li>
+                            <li aria-label="Previous" class="disabled"><a>&laquo;</a></li>
+                            <li class="active"><a>1</a></li>
+                            <li class=""><a>2</a></li>
+                            <li class=""><a>3</a></li>
+                            <li class=""><a>4</a></li>
+                            <li class=""><a>5</a></li>
+                            <li class=""><a>6</a></li>
+                            <li class=""><a>7</a></li>
+                            <li class=""><a>8</a></li>
+                            <li class=""><a>9</a></li>
+                            <li class=""><a>10</a></li>
+                            <li aria-label="Next 10"><a>...</a></li>
+                            <li aria-label="Next" class=""><a>&raquo;</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -304,7 +242,9 @@
                                     </div>
                                     <div class="panel-footer">
                                         <div class="job-detail">Added: 1/8/2017</div>
-                                        <a class="btn btn-muted pull-right" href="#">Continue editing</a>
+                                        <a class="btn btn-muted btn-sm pull-right" disabled href="#">
+                                            <div class="spinner">&nbsp;</div> Continue editing
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +281,7 @@
                                             <div class="loader loader-sm" style="position: relative; top: 5px;">
                                                 <div class="spinner">&nbsp;</div>
                                             </div>
-                                            <a class="btn btn-warning" href="#">View Job</a>
+                                            <a class="btn btn-sm btn-warning" href="#">View Job</a>
                                         </div>
                                     </div>
                                 </div>
@@ -680,8 +620,8 @@
                                                 <i class="glyphicon glyphicon-edit"></i>
                                                 Change phone
                                             </a>
-                                            <button type="submit" class="btn btn-xs pull-right" onclick="return confirm('Are you sure you wan to remove your phone number?')">
-                                                <i class="glyphicon glyphicon-remove"></i>
+                                            <button type="submit" class="btn btn-xs pull-right" disabled onclick="return confirm('Are you sure you wan to remove your phone number?')">
+                                                <span class="spinner"></span>
                                                 Remove phone
                                             </button>
                                         </div>
