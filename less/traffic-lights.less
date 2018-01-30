@@ -7,12 +7,49 @@
     border-radius: 7px;
     background-color: @gray-light;
 }
-.traffic-light-warning {
-    background-color: @brand-warning;
-}
 .traffic-light-primary {
     background-color: @brand-primary;
 }
+.traffic-light-warning {
+    background-color: @brand-warning;
+}
 .traffic-light-danger {
     background-color: @brand-danger;
+}
+
+.traffic-list-style(@color) {
+    border-color: @color;
+
+    .traffic-light {
+        background-color: @color;
+    }
+    h4 {
+        color: @color
+    }
+}
+
+.traffic-list {
+    border-width: 0 0 0 3px;
+    border-style: solid;
+    padding-left: 15px;
+    margin: 30px 0;
+}
+.traffic-list h4 {
+    position: relative;
+    bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.traffic-list .traffic-light {
+    margin-left: -24px;
+    margin-right: 5px;
+}
+.traffic-list-primary {
+    .traffic-list-style(@brand-primary);
+}
+.traffic-list-warning {
+    .traffic-list-style(@brand-warning);
+}
+.traffic-list-danger {
+    .traffic-list-style(@brand-danger);
 }
