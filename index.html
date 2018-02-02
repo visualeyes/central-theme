@@ -8,33 +8,11 @@
     <title>Theme Demo</title>
 
     <style>
-        /* app specific styles */
-
-        .jobs-list {
-            padding-top: 10px;
-        }
-
-        .job-status .traffic-light {
-            margin: 5px auto;
-        }
-
-        .job-status {
-            padding-top: 40px;
-            text-align: center;
-            color: #BBB;
-            text-transform: uppercase;
-        }
-
         .panel-job .job-detail {
             display: inline-block;
             margin-right: 15px;
             color: #BBB;
         }
-
-        .panel-job .panel-footer {
-            border-top: 1px solid #EEE;
-        }
-
         .logo {
             width: 35px;
             height: 35px;
@@ -61,46 +39,19 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <div class="navbar-organisation">
                         <small>You're managing</small>
-                        <div>
-                            <h3 style="word-break: break-word;">Megacorp</h3>
-                        </div>
-                        <div class="loader">
-                            <span class="spinner"></span>
-                        </div>
-                        <div>
-                            <a>Change organisation</a>
-                        </div>
+                        <div><h3 style="word-break: break-word;">Megacorp</h3></div>
+                        <div class="loader"><span class="spinner"></span></div>
+                        <div><a>Change organisation</a></div>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li role="presentation" class="active">
-                            <a role="button" href="#">
-                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs</a>
-                        </li>
-                        <li role="presentation" class="">
-                            <a role="button" href="#">
-                                <span class="glyphicon glyphicon-home"></span>&nbsp;My Organisation</a>
-                        </li>
-                        <li role="presentation" class="">
-                            <a role="button" href="#">
-                                <span class="glyphicon glyphicon-list-alt"></span>&nbsp;Invoices / Reciepts</a>
-                        </li>
-                        <li role="presentation" class="">
-                            <a role="button" href="#">
-                                <span class="glyphicon glyphicon-info-sign"></span>&nbsp; Help &amp; resources</a>
-                        </li>
+                        <li role="presentation" class="active"><a role="button" href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Jobs</a></li>
+                        <li role="presentation" class=""><a role="button" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;My Organisation</a></li>
+                        <li role="presentation" class=""><a role="button" href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Invoices / Reciepts</a></li>
+                        <li role="presentation" class=""><a role="button" href="#"><span class="glyphicon glyphicon-info-sign"></span>&nbsp; Help &amp; resources</a></li>
                     </ul>
                     <div class="navbar-user">
-                        <div>
-                            <a role="button" href="#">
-                                <span class="glyphicon glyphicon-user"></span>&nbsp;pete@visualeyes.net.au</a>
-                        </div>
-                        <div>
-                            <form>
-                                <button type="button">
-                                    <span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
-                                </button>
-                            </form>
-                        </div>
+                        <div><a role="button" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;pete@visualeyes.net.au</a></div>
+                        <div><form><button type="button"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</button></form></div>
                     </div>
                 </div>
             </nav>
@@ -118,175 +69,171 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-6">
-                        <div class="loader">
-                            <div class="spinner" title="loading">&nbsp;</div>
-                            <span class="title">loader...</span>
-                        </div>
-                        <div class="loader">
-                            <div class="spinner" title="loading">&nbsp;</div>
-                            <span class="title">loader 2...</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="loader-error">
-                            <h4>Errors</h4>
-                            loader errors
-                        </div>
-                    </div>
-                </div>
-
-                <br />
-
-                <ol class="progress-indicator">
-                    <li class="completed"><a><span class="bubble">1</span> Position</a></li>
-                    <li class="completed active"><span class="bubble">2</span> Contact Details</li>
-                    <li class=""><a><span class="bubble">3</span> Application Info</a></li>
-                    <li class="disabled"><span class="bubble">4</span> Distribution</li>
-                    <li class="disabled"><span class="bubble">5</span> Publish</li>
-                </ol>
-
-                <br />
-
-                <ol class="progress-indicator">
-                    <li class="completed"><span class="bubble">1</span> Submit Email</li>
-                    <li class="active"><span class="bubble">2</span> Verify Email</li>
-                </ol>
-
-                <br />
-
-                <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <i class="glyphicon glyphicon-info-sign"></i>
-                    Something happened
-                </div>
-
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <i class="glyphicon glyphicon-ok"></i>
-                    Something good happened
-                </div>
-
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <i class="glyphicon glyphicon-warning-sign"></i>
-                    Something bad happened
-                </div>
-
-                <ul class="nav-inline nav" style="text-align: center; margin-top: -10px;">
-                    <li role="presentation" class="active"><a role="button" href="#">Dashboard</a></li>
-                    <li role="presentation" class=""><a role="button" href="#">draft</a></li>
-                    <li role="presentation" class=""><a role="button" href="#">pending</a></li>
-                    <li role="presentation" class=""><a role="button" href="#">active</a></li>
-                    <li role="presentation" class=""><a role="button" href="#">expired</a></li>
-                    <li role="presentation" class=""><a role="button" href="#">all</a></li>
-                </ul>
-
-
-                <div class="line-behind text-center text-muted">
-                    <span>or</span>
-                </div>
-
-                <div class="line-behind">
-                    <h4 style="padding-left: 0px;">Drafts</h4>
-                    <a href="#">
-                        All draft jobs
-                    </a>
-                </div>
-
-                <div class="text-center">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination" style="margin-top: 5px;">
-                            <li aria-label="Previous" class="disabled"><a>&laquo;</a></li>
-                            <li class="active"><a>1</a></li>
-                            <li class=""><a>2</a></li>
-                            <li class=""><a>3</a></li>
-                            <li class=""><a>4</a></li>
-                            <li class=""><a>5</a></li>
-                            <li class=""><a>6</a></li>
-                            <li class=""><a>7</a></li>
-                            <li class=""><a>8</a></li>
-                            <li class=""><a>9</a></li>
-                            <li class=""><a>10</a></li>
-                            <li aria-label="Next 10"><a>...</a></li>
-                            <li aria-label="Next" class=""><a>&raquo;</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="jobs-list">
-                    <div class="row">
-                        <div class="hidden-xs job-status col-lg-1 col-sm-2">
-                            <div class="traffic-light traffic-light-muted"></div>
-                            <div>Draft</div>
-                        </div>
-                        <div class="col-sm-10">
-                            <div class="panel panel-job panel-muted">
-                                <div class="panel-heading">
-                                    <a href="#">
-                                        <h4>Account Manager - Programmatic Digital Media</h4>
-                                    </a>
-                                </div>
-                                <div class="panel-body text-light">
-                                    Lorem ipsum dolor amet pabst mustache gluten-free kombucha. Try-hard fam raw denim marfa. Bicycle rights kale chips celiac
-                                    whatever glossier poke readymade sriracha typewriter lumbersexual gentrify keffiyeh
-                                    vape tumeric. Squid dreamcatcher disrupt, you probably haven't heard of them enamel
-                                    pin cloud bread gochujang salvia viral normcore kale chips
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="job-detail">Added: 1/8/2017</div>
-                                    <a class="btn btn-muted btn-sm pull-right" disabled href="#">
-                                        <div class="spinner">&nbsp;</div> Continue editing
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="hidden-xs job-status col-lg-1 col-md-2 col-sm-2">
-                            <div class="traffic-light traffic-light-warning"></div>
-                            <div>Pending
-                                <br>Approval</div>
-                        </div>
-                        <div class="col-sm-10">
-                            <div class="panel panel-job panel-warning">
-                                <div class="panel-heading">
-                                    <a href="#">
-                                        <h4>Higher Education Sales Representative</h4>
-                                    </a>
-                                </div>
-                                <div class="panel-body text-light">
-                                    Small batch affogato whatever microdosing flannel sartorial keytar bespoke pinterest chambray.
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="job-detail">Published: 27/2/2017</div>
-                                    <div class="job-detail">Expires: 5/12/2017</div>
-
-                                    <div class="pull-right">
-                                        <div class="loader-error loader-sm" style="position: relative; top: 5px;">
-                                            <h4>Service errors</h4>
-                                            some error
-                                        </div>
-                                        <div class="loader loader-sm" style="position: relative; top: 5px;">
-                                            <div class="spinner">&nbsp;</div>
-                                        </div>
-                                        <a class="btn btn-sm btn-warning" href="#">View Job</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="col-lg-10">
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="loader">
+                                    <div class="spinner" title="loading">&nbsp;</div>
+                                    <span class="title">loader...</span>
+                                </div>
+                                <div class="loader">
+                                    <div class="spinner" title="loading">&nbsp;</div>
+                                    <span class="title">loader 2...</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="loader-error">
+                                    <h4>Errors</h4>
+                                    loader errors
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <ol class="progress-indicator">
+                            <li class="completed"><a><span class="bubble">1</span> Position</a></li>
+                            <li class="completed active"><span class="bubble">2</span> Contact Details</li>
+                            <li class=""><a><span class="bubble">3</span> Application Info</a></li>
+                            <li class="disabled"><span class="bubble">4</span> Distribution</li>
+                            <li class="disabled"><span class="bubble">5</span> Publish</li>
+                        </ol>
+
+                        <br />
+
+                        <ol class="progress-indicator">
+                            <li class="completed"><span class="bubble">1</span> Submit Email</li>
+                            <li class="active"><span class="bubble">2</span> Verify Email</li>
+                        </ol>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="alert alert-info">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                    Something happened
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="alert alert-success">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                    Something good happened
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="alert alert-danger">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <i class="glyphicon glyphicon-warning-sign"></i>
+                                    Something bad happened
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav-inline nav" style="text-align: center; margin-top: -10px;">
+                            <li role="presentation" class=""><a role="button" href="#"><span class="circle circle-sm">&nbsp;</span> draft</a></li>
+                            <li role="presentation" class=""><a role="button" href="#"><span class="circle circle-sm circle-warning">&nbsp;</span> pending</a></li>
+                            <li role="presentation" class=""><a role="button" href="#"><span class="circle circle-sm circle-primary">&nbsp;</span> active</a></li>
+                            <li role="presentation" class=""><a role="button" href="#">expired</a></li>
+                            <li role="presentation" class=""><a role="button" href="#">all</a></li>
+                        </ul>
+
+
+                        <div class="line-behind text-center text-muted">
+                            <span>or</span>
+                        </div>
+
+                        <div>
+                            <h4 style="padding-right: 10px; margin: 0; display: inline-block">
+                                <span class="circle">&nbsp;</span> Drafts
+                            </h4>
+                            <span class="text-light">
+                                These jobs that have not been published. Your vacancy details are <strong>NOT</strong> visible to students 
+                                until they are <strong>published</strong> and approved by the university careers services.
+                            </span>
+                            <a href="#" class="btn btn-xs">
+                                All draft jobs
+                            </a>
+                        </div>
+
+                        <div class="text-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination" style="margin-top: 5px;">
+                                    <li aria-label="Previous" class="disabled"><a>&laquo;</a></li>
+                                    <li class="active"><a>1</a></li>
+                                    <li class=""><a>2</a></li>
+                                    <li class=""><a>3</a></li>
+                                    <li class=""><a>4</a></li>
+                                    <li class=""><a>5</a></li>
+                                    <li class=""><a>6</a></li>
+                                    <li class=""><a>7</a></li>
+                                    <li class=""><a>8</a></li>
+                                    <li class=""><a>9</a></li>
+                                    <li class=""><a>10</a></li>
+                                    <li aria-label="Next 10"><a>...</a></li>
+                                    <li aria-label="Next" class=""><a>&raquo;</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="panel panel-muted">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Account Manager - Programmatic Digital Media</a></h4>
+                            </div>
+                            <div class="panel-body text-light">
+                                Lorem ipsum dolor amet pabst mustache gluten-free kombucha. Try-hard fam raw denim marfa. Bicycle rights kale chips celiac
+                                whatever glossier poke readymade sriracha typewriter lumbersexual gentrify keffiyeh
+                                vape tumeric. Squid dreamcatcher disrupt, you probably haven't heard of them enamel
+                                pin cloud bread gochujang salvia viral normcore kale chips
+                            </div>
+                            <div class="panel-footer">
+                                <div class="job-detail">Added: 1/8/2017</div>
+                                <a class="btn btn-muted btn-sm pull-right" disabled href="#">
+                                    <div class="spinner">&nbsp;</div> Continue editing
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-job panel-warning">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Higher Education Sales Representative</a></h4>
+                            </div>
+                            <div class="panel-body text-light">
+                                Small batch affogato whatever microdosing flannel sartorial keytar bespoke pinterest chambray.
+                            </div>
+                            <div class="panel-footer">
+                                <div class="job-detail">Published: 27/2/2017</div>
+                                <div class="job-detail">Expires: 5/12/2017</div>
+
+                                <div class="pull-right">
+                                    <div class="loader-error loader-sm" style="position: relative; top: 5px;">
+                                        <h4>Service errors</h4>
+                                        some error
+                                    </div>
+                                    <div class="loader loader-sm" style="position: relative; top: 5px;">
+                                        <div class="spinner">&nbsp;</div>
+                                    </div>
+                                    <a class="btn btn-sm btn-warning" href="#">View Job</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs panel-tabs">
+                            <li role="presentation"><a>Stats</a></li>
+                            <li role="presentation" class="active"><a>Distribution</a></li>
+                            <li role="presentation"><a>Detail</a></li>
+                        </ul>
+                        
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4>Address Details</h4>
@@ -635,18 +582,18 @@
 
                         
                         <div class="panel">
-                            <div class="panel-body" style="padding: 30px 20px;">
+                            <div class="panel-body" style="padding: 15px 20px;">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <div class="traffic-list traffic-list-primary">
-                                            <h4><span class="traffic-light"></span> Approved</h4>
+                                        <div class="vline vline-primary">
+                                            <h4><span class="circle"></span> Approved</h4>
                                             <div>ANU - Australian National University</div>
                                             <div>UC - University of Canberra</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="traffic-list traffic-list-warning">
-                                            <h4><span class="traffic-light"></span> Pending Approval</h4>
+                                        <div class="vline vline-warning">
+                                            <h4><span class="circle"></span> Pending Approval</h4>
                                             <div>CDU - Charles Darwin University</div>
                                         </div>
                                     </div>
@@ -668,49 +615,41 @@
         <div class="modal-dialog modal-lg" >
             <div class="modal-content" role="document" style="background-color: transparent; border: none; box-shadow: none;">
                 <div style="padding: 50px 30px; margin-top: 30px; color: white; text-shadow: 0 0 2px black;"  class="text-center">
-                    <div class="traffic-light traffic-light-warning"></div>
+                    <div class="circle circle-warning"></div>
                         <h2 style="font-weight: bold;">Your job ad was successfully posted!</h2>
                         <br />
                         <p style="font-size: 14px;">The ad is now being reviewed by our staff at CareerHub</p>
                 </div>
 
-                <div class="row">
-                    <div class="hidden-xs job-status col-md-offset-1 col-md-1 col-sm-2">
-                        <div class="traffic-light traffic-light-warning"></div>
-                        <div style="color: white; text-shadow: 0 0 2px black">Draft</div>
-                    </div>
-                    <div class="col-sm-10">
 
-                        <div class="panel panel-warning panel-job" style="box-shadow: 0 0 25px #333333;">
-                            <div class="panel-heading">
-                                <a href="#">
-                                    <h4>Account Manager - Programmatic Digital Media</h4>
-                                </a>
-                            </div>
-                            <div class="panel-body text-light">
-                                Lorem ipsum dolor amet pabst mustache gluten-free kombucha. Try-hard fam raw denim marfa. Bicycle rights kale chips celiac
-                                whatever glossier poke readymade sriracha typewriter lumbersexual gentrify keffiyeh
-                                vape tumeric. Squid dreamcatcher disrupt, you probably haven't heard of them enamel
-                                pin cloud bread gochujang salvia viral normcore kale chips
-                            </div>
-                            <div class="panel-footer">
-                                <div class="job-detail">Added: 1/8/2017</div>
-                                <a class="btn btn-warning btn-sm pull-right" href="#">
-                                    <i class="glyphicon glyphicon-eye-open"></i> View job
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="text-right">
-                            <a class="btn btn-inverse btn-sm" href="#" style="color: white; text-shadow: 0 0 2px black">
-                                <i class="glyphicon glyphicon-briefcase"></i>&nbsp;&nbsp;View jobs
-                            </a>
-                            <br />
-                            <a class="btn btn-inverse btn-sm" href="#" style="color: white; text-shadow: 0 0 2px black">
-                                <i class="glyphicon glyphicon-plus"></i> Add new job
-                            </a>
-                        </div>
+                <div class="panel panel-warning panel-job" style="box-shadow: 0 0 25px #333333;">
+                    <div class="panel-heading">
+                        <a href="#">
+                            <h4>Account Manager - Programmatic Digital Media</h4>
+                        </a>
                     </div>
+                    <div class="panel-body text-light">
+                        Lorem ipsum dolor amet pabst mustache gluten-free kombucha. Try-hard fam raw denim marfa. Bicycle rights kale chips celiac
+                        whatever glossier poke readymade sriracha typewriter lumbersexual gentrify keffiyeh
+                        vape tumeric. Squid dreamcatcher disrupt, you probably haven't heard of them enamel
+                        pin cloud bread gochujang salvia viral normcore kale chips
+                    </div>
+                    <div class="panel-footer">
+                        <div class="job-detail">Added: 1/8/2017</div>
+                        <a class="btn btn-warning btn-sm pull-right" href="#">
+                            <i class="glyphicon glyphicon-eye-open"></i> View job
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <a class="btn btn-inverse btn-sm" href="#" style="color: white; text-shadow: 0 0 2px black">
+                        <i class="glyphicon glyphicon-briefcase"></i>&nbsp;&nbsp;View jobs
+                    </a>
+                    <br />
+                    <a class="btn btn-inverse btn-sm" href="#" style="color: white; text-shadow: 0 0 2px black">
+                        <i class="glyphicon glyphicon-plus"></i> Add new job
+                    </a>
                 </div>
             </div>
         </div>
