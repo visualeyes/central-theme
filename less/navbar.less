@@ -10,11 +10,6 @@
     border-radius: 0;
     margin-bottom: 0;
 
-    .text-danger, 
-    .loader-error {
-        color: black
-    }
-
     .loader {
         margin: 20px auto;
         color: darken(@navbar-default-bg, 10%);
@@ -23,6 +18,11 @@
             border-color: darken(@navbar-default-bg, 10%);
             border-top-color: darken(@navbar-default-bg, 20%);
         }
+    }
+
+    .text-danger, 
+    .loader-error {
+        color: black
     }
 
     .navbar-header + .navbar-collapse > .navbar-nav:first-child {
