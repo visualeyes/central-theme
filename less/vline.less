@@ -1,0 +1,36 @@
+.vline-style(@color) {
+    border-color: @color;
+
+    .circle {
+        background-color: @color;
+    }
+    h4 {
+        color: @color
+    }
+}
+
+.vline {
+    border-width: 0 0 0 3px;
+    border-style: solid;
+    padding-left: 15px;
+    margin: 30px 0;
+}
+.vline h4 {
+    position: relative;
+    bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.vline .circle {
+    margin-left: -24px;
+    margin-right: 5px;
+}
+.vline-primary {
+    .vline-style(@brand-primary);
+}
+.vline-warning {
+    .vline-style(@brand-warning);
+}
+.vline-danger {
+    .vline-style(@brand-danger);
+}

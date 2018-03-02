@@ -55,6 +55,7 @@
 @import "buttons.less";
 @import "line-behind.less";
 @import "circle.less";
+@import "vline.less";
 @import "nav-inline.less";
 @import "loader.less";
 @import "utilities.less";
@@ -63,6 +64,7 @@
 @import "progress-indicator.less";
 @import "tabs.less";
 @import "modals.less";
+@import "list-group.less";
 
 form {
   margin: 0;
@@ -84,19 +86,6 @@ ul.pagination > li > a {
 
 .page {
   padding-bottom: 100px;
-}
-
-.list-group-item {
-  &.disabled {
-    background-color: #F6F6F6;
-  
-    &:hover {
-      background-color: #F6F6F6;
-    }
-  }
-  &.toggled {
-    background-color: lighten(@brand-primary, 40%);
-  }
 }
 
 .text-info a,
